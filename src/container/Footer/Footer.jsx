@@ -65,22 +65,22 @@ const Footer = () => {
           <FaLinkedin style={{ color: "#0e76a8" }} />
           <p>100k+ Impressions</p>
         </a>
-        <div
+        <a
           className="app_footer-card p-text"
           href="https://www.instagram.com/muazim_codes/"
           target="_blank"
         >
           <FaInstagram style={{ color: "#dd2a7b" }} />
           <p>15k+ Followers</p>
-        </div>
-        <div
+        </a>
+        <a
           className="app_footer-card p-text"
           href="https://www.quora.com/profile/Muazim-Maqbool"
           target="_blank"
         >
           <FaQuora style={{ color: "#A82400" }} />
           <p>50k+ Views</p>
-        </div>
+        </a>
       </div>
       {!isFormSubmitted ? (
         <div className="app_footer-form app__flex">
