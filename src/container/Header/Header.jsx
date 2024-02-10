@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Header.scss";
 
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { images } from "../../constants/index";
 
 import AppWrap from "../../Wrapper/AppWrap";
 const Header = () => {
+  const scaleVariants = {
+    whileInView: {
+      scale: [0, 1], //i.e animation from 0 to 1
+      opacity: [0, 1],
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const linecount = useRef(null);
+  const projectscount = useRef(null);
+  const coffeecount = useRef(null);
 
-  const scaleVariants={
-    whileInView:{
-      scale:[0,1], //i.e animation from 0 to 1
-      opacity:[0,1],
-      transition:{
-        duration:1,
-        ease:'easeInOut'
-      }
-    }
-  }
+  const animationLinesCount = () => {
+    animate(0, 100, {
+      duration: 1, //means 1second
+      onUpdate: (value) => (linecount.current.textContent = value.toFixed()), //toFixed() will only give whole numbe like this 1,2,3,4... not like this 1.1213,2.221,.
+    });
+  };
+  const animationProjectsCount = () => {
+    animate(0, 20, {
+      duration: 1, //means 1second
+      onUpdate: (value) =>
+        (projectscount.current.textContent = value.toFixed()), //toFixed() will only give whole numbe like this 1,2,3,4... not like this 1.1213,2.221,.
+    });
+  };
+  const animationCoffeeCount = () => {
+    animate(0, 1000, {
+      duration: 1,
+      onUpdate: (value) => (coffeecount.current.textContent = value.toFixed()),
+    });
+  };
   return (
     <div className="app_header app__flex">
       <motion.div
@@ -56,19 +78,44 @@ const Header = () => {
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
         //scaleVariants declared above
-        className="app_header-circles"
-      >
-        {
-          [images.js, images.react, images.node].map((item,index)=>(
-            <div className="circle-cmp app__flex" key={index}>
-              <img src={item} alt="circles"/>
-            </div>
-          ))
-        }
+        className="numbers_animation"
+      > 
+        <div className="numbers_header-badge">
+          <div className="data app__flex" >
+            <p>
+              <motion.span
+                whileInView={animationLinesCount}
+                ref={linecount}
+              ></motion.span>
+              K+
+            </p>
+            <p>lines of code</p>
+          </div>
+          <div className="data app__flex">
+            <p>
+              <motion.span
+                whileInView={animationProjectsCount}
+                ref={projectscount}
+              ></motion.span>
+              +
+            </p>
+            <span>Projects done</span>
+          </div>
+          <div className="data app__flex">
+            <p>
+              <motion.span
+                whileInView={animationCoffeeCount}
+                ref={coffeecount}
+              ></motion.span>
+              +
+            </p>
+            <span>Cups of coffee drunk</span>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
 };
 
 //we are going into Appwraper we are passing Entire Header as a component and we are passing ID name
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");

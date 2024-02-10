@@ -71,7 +71,7 @@ const Footer = () => {
           target="_blank"
         >
           <FaInstagram style={{ color: "#dd2a7b" }} />
-          <p>15k+ Followers</p>
+          <p>16k+ Followers</p>
         </a>
         <a
           className="app_footer-card p-text"
