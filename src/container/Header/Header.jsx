@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Header.scss";
 
 import { animate, motion } from "framer-motion";
@@ -39,6 +39,18 @@ const Header = () => {
       onUpdate: (value) => (coffeecount.current.textContent = value.toFixed()),
     });
   };
+
+  //handle wave animation
+  const waveRef = useRef(null);
+
+  useEffect(() => {
+    const waveAnimation = animate(waveRef.current, {
+      rotate: [0, 20, -10, 10, 0],
+      transition: { duration: 2, loop: Infinity, repeatDelay: 3 },
+    });
+
+    return () => waveAnimation.stop();
+  }, []);
   return (
     <div className="app_header app__flex">
       <motion.div
@@ -48,7 +60,16 @@ const Header = () => {
       >
         <div className="app_header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <motion.span
+            ref={waveRef}
+            role="img"
+            aria-label="wave-hand"
+            className="wave-hand"
+              whileInView={{ rotate: [0, 20, -10, 10, 0] }}
+              transition={{ duration: 2, loop: Infinity, repeatDelay: 3 }}
+            >
+              👋
+            </motion.span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Muazim</h1>
@@ -56,7 +77,6 @@ const Header = () => {
           </div>
           <div className="tag-cmp app__flex">
             <p className="p-text">Software Engineer</p>
-            {/* <p className="p-text">Freelancer</p> */}
           </div>
         </div>
       </motion.div>
@@ -79,9 +99,9 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         //scaleVariants declared above
         className="numbers_animation"
-      > 
+      >
         <div className="numbers_header-badge">
-          <div className="data app__flex" >
+          <div className="data app__flex">
             <p>
               <motion.span
                 whileInView={animationLinesCount}
