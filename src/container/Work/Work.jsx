@@ -1,50 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./work.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
-import {AppWrap,MotionWrap} from "../../Wrapper";
-import projectsdata from "../../constants/projectsdata";
+import { AppWrap, MotionWrap } from "../../Wrapper";
+import projectsdata, { moreprojects } from "../../constants/projectsdata";
 
 const Work = () => {
-  const [works, setWorks] = useState([]);
-  const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
-  const handleWorkFilter = (item) => {
-    setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
-
-    setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
-
-      if (item === "All") {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
-    }, 500);
-  };
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> section
+        My Creative <span>Projects</span> section
       </h2>
-      <div className="app_work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app_work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
-      </div>
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -88,17 +57,37 @@ const Work = () => {
             </div>
 
             <div className="app_work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
+              <a href={work.url} target="_blank" rel="noreferrer">
+                <h4 className="bold-text">{work.title}</h4>
+              </a>
+              <p className="p-text description" style={{ marginTop: 10 }}>
                 {work.description}
               </p>
-
-              <div className="app_work-tag app__flex">
-                <p className="p-text">{work.tag}</p>
-              </div>
             </div>
           </div>
         ))}
+      </motion.div>
+      <motion.div
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="more_projects"
+      >
+        <p className="bold-text">More Projects</p>
+
+        <div className="more_projects_list">
+          {moreprojects.map((item) => (
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5, type: "tween" }}
+              key={item._id}
+            >
+              <div className="more_projects_title">
+                {item.name}
+                <BsArrowUpRight />
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </>
   );
@@ -106,8 +95,4 @@ const Work = () => {
 
 //export default AppWrap(Work, "work");
 //here we will wrap our component inside two higher order components i.e AppWrap and MotionWrap
-export default AppWrap(
-  MotionWrap(Work,'app_works'),
-  'work',
-  'app__primarybg'
-)
+export default AppWrap(MotionWrap(Work, "app_works"), "work", "app__whitebg");

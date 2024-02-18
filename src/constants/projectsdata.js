@@ -24,24 +24,6 @@ const projectsdata = [
     image: crypto,
     category: "Website",
   },
-  //   {
-  //     tag: "All",
-  //     title: "Hotel Dream-Park",
-  //     description: "",
-  //     url: "#",
-  //     code: "",
-  //     image: hotel,
-  //     category: "Branding",
-  //   },
-  //   {
-  //     tag: "All",
-  //     title: "Saboon Traders",
-  //     description: "",
-  //     url: "#",
-  //     code: "",
-  //     image: trader,
-  //     category: "Branding",
-  //   },
   {
     tag: "All",
     title: "CarWeb",
@@ -62,62 +44,35 @@ const projectsdata = [
     image: wc,
     category: "Website",
   },
-  //   {
-  //     tag: "All",
-  //     title: "Ayaz Fruit Co.",
-  //     description: "",
-  //     url: "#",
-  //     image: ayazfruits,
-  //     category: "Branding",
-  //   },
-
-//   {
-//     tag: "All",
-//     title: "EventHub",
-//     description:
-//       "Website design for Event Management companies.",
-//     url: "https://eventhub-demo.netlify.app/",
-//     code: "",
-//     image: eh,
-//     category: "Website",
-//   },
-//   {
-//     tag: "All",
-//     title: "BrandSolutions",
-//     description: "Brand Solution is website design for advertisement companies",
-//     url: "https://brandsolutions.netlify.app/",
-//     code: "",
-//     image: bs,
-//     category: "Website",
-//   },
-  //   {
-  //     tag: "All",
-  //     title: "Hilal Restaurants",
-  //     description: "Logo design for Hilal Resturants",
-  //     url: "#",
-  //     code: "",
-  //     image: hR,
-  //     category: "Branding",
-  //   },
-
-  //   {
-  //     tag: "All",
-  //     title: "Towfeeq Medicate",
-  //     description: "",
-  //     url: "#",
-  //     code: "",
-  //     image: tm,
-  //     category: "Branding",
-  //   },
-
-  //   {
-  //     tag: "All",
-  //     title: "UAM Sanitary",
-  //     description: "",
-  //     url: "#",
-  //     code: "",
-  //     image: uam,
-  //     category: "Branding",
-  //   },
 ];
+
+const moreprojects=[
+  {
+    name:"project 1",
+    link:"",
+  },
+  {
+    name:"project 2",
+    link:"",
+  },
+  {
+    name:"project 3",
+    link:"",
+  },
+  {
+    name:"project 4",
+    link:"",
+  },
+  {
+    name:"project 5",
+    link:"",
+  },
+  {
+    name:"project 6",
+    link:"",
+  },
+  
+
+]
 export default projectsdata;
+export {moreprojects}
