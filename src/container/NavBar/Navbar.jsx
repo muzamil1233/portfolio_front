@@ -16,7 +16,7 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app_navbar_links">
-        {["home", "about", "work", "skills", "blog", "contact"].map(
+        {["home", "work", "about", "skills", "blog", "contact"].map(
           (item, index) => (
             <li className="app__flex p-text" key={index}>
               <div />
@@ -45,30 +45,24 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {[
-                "home",
-                "about",
-                "work",
-                "skills",
-                "blog",
-                "contact",
-              ].map((item, index) => (
-                <li key={index}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["home", "work", "about", "skills", "blog", "contact"].map(
+                (item, index) => (
+                  <li key={index}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
               <a
-              href="https://wa.me/7889412167"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="talk_button p-text"
-            >
-              Let's Talk
-            </a>
+                href="https://wa.me/7889412167"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="talk_button p-text"
+              >
+                Let's Talk
+              </a>
             </ul>
-            
           </motion.div>
         )}
       </div>
