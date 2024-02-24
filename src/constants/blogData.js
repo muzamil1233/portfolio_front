@@ -1,8 +1,8 @@
-import cpp from "../assets/Skills/cpp.png";
-import css from "../assets/Skills/css.png";
-import react from "../assets/Skills/react.png";
-import git from "../assets/Skills/git.png";
-import js from "../assets/Skills/javascript.png";
+import cpp from "../assets/cpp.png";
+import css from "../assets/css.png";
+import react from "../assets/react.png";
+import git from "../assets/git.png";
+import js from "../assets/javascript.png";
 const blogData= [
     {
       name: "Blog test Name",

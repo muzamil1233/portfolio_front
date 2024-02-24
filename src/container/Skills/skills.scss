@@ -6,10 +6,10 @@
 
 .app_skills-container {
   width: 80%;
-  margin-top: 3rem;
-
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   //for screens less than 900px
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -20,10 +20,7 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  margin-right: 5rem;
+  justify-content:center;
 
   @media screen and (max-width: 900px) {
     margin-right: 0;
@@ -34,24 +31,17 @@
 .app_skills-item {
     flex-direction: column;
     text-align: center;
-  
     margin: 1rem;
-  
     transition: all 0.3s ease-in-out;
-  
     div {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background-color: #fff;
   
       img {
-        width: 50%;
-        height: 50%;
-      }
-  
-      &:hover {
-        box-shadow: 0 0 25px #fef4f5;
+        width: 60%;
+        height: 60%;
       }
       //for screens more then 2000px of size
       @media screen and (min-width: 2000px) {
@@ -60,13 +50,16 @@
       }
       //for devices with less then 450px
       @media screen and (max-width: 450px) {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
       }
+    }
+    @media screen and (max-width: 450px) {
+     margin: 0.7rem;
     }
   
     p {
-      font-weight: 500;
+      font-weight: 600;
       margin-top: 0.5rem;
     }
   
@@ -82,12 +75,11 @@
   .app_skills-exp {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left:80px;
     @media screen and (max-width: 900px) {
-      margin-top: 2rem;
+      display: none;
     }
   }
   
@@ -103,53 +95,37 @@
   .app_skills-exp-works {
     flex: 1;
   
-    .app_skills-exp-work {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      cursor: pointer;
-  
-      h4 {
-        font-weight: 500;
+    a{
+      text-decoration: none;
+      .app_skills-exp-work {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    
+        h4 {
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          transition: all 0.3s ease-in-out;
+        }
+    
+        p {
+          font-weight: 400;
+          color: var(--gray-color);
+          margin-top: 3px;
+        }
+        
       }
-  
-      p {
-        font-weight: 400;
-        color: var(--gray-color);
-        margin-top: 5px;
+      &:hover{
+        h4{
+          color:var(--secondary-color);
+        }
       }
     }
+    
   }
   
-  .app_skills-exp-year {
-    margin-right: 3rem;
-  
-    p {
-      font-weight: 800;
-      color: var(--secondary-color);
-    }
-  
-    @media screen and (max-width: 450px) {
-      margin-right: 1rem;
-    }
-  }
-  
-  .skills-tooltip {
-    max-width: 300px !important;
-    background-color: var(--white-color) !important;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
-    padding: 1rem !important;
-    color: var(--gray-color) !important;
-    text-align: center !important;
-    line-height: 1.5 !important;
-    opacity: 1 !important;
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 1.75rem !important;
-      max-width: 500px !important;
-      line-height: 2 !important;
-    }
-  }

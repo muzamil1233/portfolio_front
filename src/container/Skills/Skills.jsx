@@ -6,12 +6,13 @@ import { AppWrap,MotionWrap} from  "../../Wrapper";
 import "./skills.scss"
 import skillsList from "../../constants/skillsList"
 import experiences from "../../constants/experiences";
+import { BsArrowUpRight } from 'react-icons/bs';
 
 const Skills = () => {
   // const [skills, setSkills] = useState([]);
   return (
    <>
-   <h2 className="head-text">Skills & Experiences</h2>
+   <h2 className="head-text">Skills & Experties</h2>
    <div className="app_skills-container">
         <motion.div className="app_skills-list">
           {skillsList.map((skill) => (
@@ -35,34 +36,22 @@ const Skills = () => {
           {experiences.map((exp) => (
             <motion.div
               className="app_skills-exp-item"
-              key={exp.year}
+              key={exp.item}
             >
-              <div className="app_skills-exp-year">
-                <p className="bold-text">{exp.year}</p>
-              </div>
               <motion.div className="app_skills-exp-works">
                 {exp?.works.map((work) => (
-                  <>
+                  <a href={work.link} target='_blank'>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app_skills-exp-work"
-                      data-tip //use full when you have tooltips
                       data-for={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <h4 className="bold-text">{work.name} <BsArrowUpRight /></h4>
+                      <p className="p-text">{work.description}</p>
                     </motion.div>
-                    <Tooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.description}
-                    </Tooltip>
-                  </>
+                  </a>
                 ))}
               </motion.div>
             </motion.div>
