@@ -10,29 +10,31 @@ import {
   FaQuora,
   FaWhatsapp,
 } from "react-icons/fa";
+import * as Yup from "yup";
+import { useFormik } from "formik"
+
+const validationScheme=Yup.object().shape({
+  name:Yup.string().matches(/^[A-Za-z\s]+$/, 'Should only contain letters').required("Enter your name"),
+  email:Yup.string().email("Invalid email address").required("Email is required"),
+  message:Yup.string().required("Enter your message"),
+})
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const { name, email, message } = formData;
-
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = () => {
-    setLoading(true);
-    emailjs
+  const formik=useFormik({
+    initialValues:{
+      name:"",
+      email:"",
+      message:"",
+    },
+    validationSchema:validationScheme,
+    onSubmit:(values)=>{
+      setLoading(true);
+      emailjs
       .send(
         "service_jcvup4k",
         "template_9x4idnr",
-        formData,
+        values,
         "nULCbUGE21ml8lSPw"
       )
       .then((result) => {
@@ -43,7 +45,8 @@ const Footer = () => {
         console.error("Email Error:", error);
         setLoading(false);
       });
-  };
+    }
+  })
 
   return (
     <>
@@ -90,8 +93,10 @@ const Footer = () => {
               type="text"
               placeholder="Your Name"
               name="name"
-              value={name}
-              onChange={handleChangeInput}
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              // error={formik.touched.name && Boolean(formik.errors.name)}
+              // helperText={formik.touched.name && formik.errors.name}
             />
           </div>
           <div className="app__flex">
@@ -100,20 +105,24 @@ const Footer = () => {
               type="email"
               placeholder="Your Email"
               name="email"
-              value={email}
-              onChange={handleChangeInput}
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              // error={formik.touched.email && Boolean(formik.errors.email)}
+              // helperText={formik.touched.email && formik.errors.email}
             />
           </div>
           <div>
             <textarea
               className="p-text"
               placeholder="Your Message"
-              value={message}
+              value={formik.values.message}
               name="message"
-              onChange={handleChangeInput}
+              onChange={formik.handleChange}
+              // error={formik.touched.message && Boolean(formik.errors.message)}
+              // helperText={formik.touched.message && formik.errors.message}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
+          <button type="button" className="p-text" onClick={formik.handleSubmit}>
             {!loading ? "Send Message" : "Sending..."}
           </button>
         </div>
