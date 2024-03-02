@@ -11,18 +11,16 @@
   align-items: center;
 
   .app_work-item {
-    width: 270px;
+    width: 250px;
     flex-direction: column;
 
     margin: 1rem;
-    padding: 0.5rem;
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
-
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     &:hover {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
     }
@@ -42,7 +40,7 @@
 
 .app_work-img {
   width: 100%;
-  height: 230px;
+  height: 220px;
 
   position: relative;
 
@@ -115,15 +113,6 @@
   }
   .description {
     text-align: center;
-  }
-
-  .app_work-tag {
-    position: absolute;
-
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    background-color: #fff;
-    top: -25px;
   }
 }
 .more_projects {

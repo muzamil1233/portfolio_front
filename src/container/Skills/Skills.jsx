@@ -23,7 +23,7 @@ const Skills = () => {
               key={skill.name}
             >
               <div
-                className="app__flex"
+                className="app__flex skill_circle"
                 style={{ backgroundColor: skill.bgColor }}
               >
                 <img src={skill.icon} alt={skill.name} />
