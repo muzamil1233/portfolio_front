@@ -48,30 +48,25 @@ const projectsdata = [
 
 const moreprojects=[
   {
-    name:"project 1",
+    name:"WeCode",
     link:"",
   },
   {
-    name:"project 2",
+    name:"Connect",
     link:"",
   },
   {
-    name:"project 3",
+    name:"Weather-App",
     link:"",
   },
   {
-    name:"project 4",
+    name:"EventHub",
     link:"",
   },
   {
-    name:"project 5",
+    name:"BrandSolutions",
     link:"",
   },
-  {
-    name:"project 6",
-    link:"",
-  },
-  
 
 ]
 export default projectsdata;

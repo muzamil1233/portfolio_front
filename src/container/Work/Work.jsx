@@ -24,7 +24,7 @@ const Work = () => {
             <div className="app_work-img app__flex">
               <img src={work.image} alt={work.title} />
 
-              <motion.div
+              {/* <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{
                   duration: 0.25,
@@ -53,7 +53,7 @@ const Work = () => {
                     <AiFillGithub />
                   </motion.div>
                 </a>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             <div className="app_work-content app__flex">
