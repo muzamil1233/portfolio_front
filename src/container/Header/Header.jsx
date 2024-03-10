@@ -22,20 +22,20 @@ const Header = () => {
 
   const animationLinesCount = () => {
     animate(0, 100, {
-      duration: 2, //means 1second
+      duration: 1.5, //means 1.5 second
       onUpdate: (value) => (linecount.current.textContent = value.toFixed()), //toFixed() will only give whole numbe like this 1,2,3,4... not like this 1.1213,2.221,.
     });
   };
   const animationProjectsCount = () => {
     animate(0, 20, {
-      duration: 2, //means 1second
+      duration: 1.5, 
       onUpdate: (value) =>
         (projectscount.current.textContent = value.toFixed()), //toFixed() will only give whole numbe like this 1,2,3,4... not like this 1.1213,2.221,.
     });
   };
   const animationCoffeeCount = () => {
     animate(0, 1000, {
-      duration: 2,
+      duration: 1.5,
       onUpdate: (value) => (coffeecount.current.textContent = value.toFixed()),
     });
   };
