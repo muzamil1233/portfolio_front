@@ -37,9 +37,9 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import js from  "../assets/js.png";
 
-import try1 from "../assets/try1.jpg";
-import try2 from "../assets/try2.png";
-import trypic from "../assets/try.png"
+import dp1 from "../assets/dp1.jpg"
+import dp2 from "../assets/dp2.jpg"
+
 export default {
   email,
   mobile,
@@ -76,7 +76,6 @@ export default {
   skype,
   spotify,
   js,
-  trypic,
-  try1,
-  try2
+  dp1,
+  dp2,
 };
