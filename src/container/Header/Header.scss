@@ -77,6 +77,10 @@
       text-transform: uppercase;
       text-align: right;
     }
+    @media screen and (max-width: 800px) {
+      margin-top: 2rem;
+      margin-left: 8rem;
+    }
   }
   span {
     font-size: 2.5rem;
@@ -85,6 +89,9 @@
     @media screen and (min-width: 2000px) {
       font-size: 5rem;
     }
+  }
+  @media screen and (min-width: 800px) {
+   margin-top: 2rem;
   }
   //when screen size is smaller then 1200px
   @media screen and (max-width: 1200px) {
@@ -188,7 +195,10 @@
     height: 400px;
     animation: profile_animation 7s ease-in-out infinite 1s;
 
-    @media screen and (max-width: 450px) {
+    @media screen and (min-width: 800px) {
+      margin-top: 2rem;
+    }
+    @media screen and (max-width: 800px) {
       width: 300px;
       height: 300px;
     }
@@ -228,14 +238,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: flex-start;
   height: 100%;
   margin: 0 2rem;
   //when screen size is more then 2000px
-  @media screen and (max-width: 2000px) {
+  @media screen and (min-width: 2000px) {
     width: 100%;
     margin-right: 0rem;
   }
+ 
 }
 .numbers_header-badge{
   width: 100%;
@@ -245,20 +255,30 @@
 
   .data{
     padding: 1rem 1.5rem;
-    background: var(--white-color);
+   // background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     gap:5px;
     width: auto;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    margin-top: 3.5rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
   }
   @media screen and (max-width: 1200px) {
     .data{
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1rem;
       margin-top: 1rem;
     }
     justify-content:flex-start;
     align-items:center;
   }
+  // @media (min-width: 800px) and (max-width:1200px) {
+  //   .data{
+  //     padding: 0.5rem 1.5rem;
+  //     margin-top: 1rem;
+  //   }
+  //   flex-direction: row;
+  //   gap: 10px;
+  //   justify-content:flex-start;
+  //   align-items:center;
+  // }
 }
