@@ -161,6 +161,91 @@
         margin: 2rem;
       }
 
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
+/***/
+.more_projects_mobile{
+  display: flex;
+  gap: 25px;
+  .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      color: var(--secondary-color);
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 100px;
+      height: 100px;
+
+      svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      background-color: var(--white-color);
+     svg{
+      width: 40px;
+      height: 40px;
+     }
+    }
+  }
+  .more_projects_mobile_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width:100%;
+      .more_projects_title_mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        color: var(--black-color);
+        
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        &:hover {
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); 
+        }
+        @media screen and (max-width: 450px) {
+         gap: 10px;
+        }
+      }
+
+      @media screen and (min-width: 2000px) {
+        width: 210px;
+        margin: 2rem;
+      }
+
       @media screen and (max-width: 450px) {
         //width: 140px;
       }
@@ -168,5 +253,11 @@
     @media screen and (max-width: 800px) {
       width: 100%;
     }
+  }
+  @media screen and (max-width:450px){
+    margin-top: -20px;
+  }
+  @media screen and (min-width: 800px) {
+    display: none;
   }
 }

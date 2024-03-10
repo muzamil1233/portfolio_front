@@ -5,10 +5,14 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../Wrapper";
 import projectsdata, { moreprojects } from "../../constants/projectsdata";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const handleClick = (index) => {
+    setCurrentIndex(index);
+  };
   return (
     <>
       <h2 className="head-text">
@@ -23,37 +27,6 @@ const Work = () => {
           <div className="app_work-item app__flex" key={index}>
             <div className="app_work-img app__flex">
               <img src={work.image} alt={work.title} />
-
-              {/* <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  staggerChildren: 0.5,
-                }}
-                className="app_work-hover app__flex"
-              >
-                <a href={work.url} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillEye />
-                  </motion.div>
-                </a>
-                <a href={work.code} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillGithub />
-                  </motion.div>
-                </a>
-              </motion.div> */}
             </div>
 
             <div className="app_work-content app__flex">
@@ -89,6 +62,46 @@ const Work = () => {
           ))}
         </div>
       </motion.div>
+
+      {moreprojects && (
+        <motion.div
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="more_projects_mobile"
+        >
+          <div
+            className="app__flex btn"
+            onClick={() =>
+              handleClick(
+                currentIndex === 0 ? moreprojects.length - 1 : currentIndex - 1
+              )
+            }
+          >
+            <HiChevronLeft />
+          </div>
+          <div className="more_projects_mobile_list">
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5, type: "tween" }}
+            >
+              <div className="more_projects_title_mobile">
+              {moreprojects[currentIndex].name}
+                <BsArrowUpRight />
+              </div>
+            </motion.div>
+          </div>
+          <div
+            className="app__flex btn"
+            onClick={() =>
+              handleClick(
+                currentIndex === moreprojects.length - 1 ? 0 : currentIndex + 1
+              )
+            }
+          >
+            <HiChevronRight />
+          </div>
+        </motion.div>
+      )}
     </>
   );
 };

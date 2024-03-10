@@ -13,6 +13,10 @@ import wc from "../assets/WorkImages/website/wecode.png";
 import eh from "../assets/WorkImages/website/eventhub.png";
 import crypto from "../assets/WorkImages/website/cryptopedia.png";
 
+//icons
+import { BsCodeSquare } from "react-icons/bs";
+import { MdOutlineSocialDistance } from "react-icons/md";
+
 const projectsdata = [
   {
     tag: "All",
@@ -48,6 +52,7 @@ const projectsdata = [
 
 const moreprojects=[
   {
+    icon:<BsCodeSquare/>,
     name:"WeCode",
     link:"",
   },

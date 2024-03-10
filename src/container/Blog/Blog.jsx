@@ -52,17 +52,6 @@ const Blog = () => {
           </div>
         </>
       )}
-      <div className="app_blog-brands app__flex">
-        {otherBlogs.map((blog) => (
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            key={blog._id}
-          >
-            <img src={blog.image} alt={blog.name} />
-          </motion.div>
-        ))}
-      </div>
     </>
   );
 };
