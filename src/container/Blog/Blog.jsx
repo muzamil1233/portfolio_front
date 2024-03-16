@@ -1,59 +1,41 @@
-import React, { useState, useEffect } from "react";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import React from "react";
 import { motion } from "framer-motion";
-import blogData,{otherBlogs} from "../../constants/blogData";
+import blogData from "../../constants/blogData";
 import { AppWrap, MotionWrap } from "../../Wrapper";
 import "./blog.scss";
 
 const Blog = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-  };
   return (
     <>
-      {blogData.length && (
-        <>
-          <div className="app_blog-item app__flex">
-            <img
-              src={blogData[currentIndex].image}
-              alt={blogData[currentIndex].name}
-            />
-            <div className="app_blog-content">
-              <p className="p-text">{blogData[currentIndex].feedback}</p>
-              <div>
-                <h4 className="bold-text">{blogData[currentIndex].name}</h4>
-                <h5 className="p-text">{blogData[currentIndex].company}</h5>
+      <h2 className="head-text">
+        I Know that <span>Good Design</span> <br />
+        means <span>Good Business</span>
+      </h2>
+      <div className="app_profiles">
+        {blogData.map((item, index) => (
+          <a href={item.link} target="_blank">
+            <motion.div
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+              className="app_profile-item"
+              key={index}
+            >
+              <img src={item.imgurl} alt="about images" />
+              <div className="blog_text">
+                <h2 className="bold-text">
+                  {item.title}
+                </h2>
+                <p className="p-text" >
+                  {item.description}
+                </p>
               </div>
-            </div>
-          </div>
-          <div className="app_blog-btns app__flex">
-            <div
-              className="app__flex"
-              onClick={() =>
-                handleClick(
-                  currentIndex === 0 ? blogData.length - 1 : currentIndex - 1
-                )
-              }
-            >
-              <HiChevronLeft />
-            </div>
-
-            <div
-              className="app__flex"
-              onClick={() =>
-                handleClick(
-                  currentIndex === blogData.length - 1 ? 0 : currentIndex + 1
-                )
-              }
-            >
-              <HiChevronRight />
-            </div>
-          </div>
-        </>
-      )}
+            </motion.div>
+          </a>
+        ))}
+      </div>
     </>
   );
 };
 
-export default AppWrap(MotionWrap(Blog, "app_blog"), "blog", "app_primarybg");
+export default AppWrap(MotionWrap(Blog, "app_blog"), "blog", "app__whitebg");

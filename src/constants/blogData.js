@@ -1,64 +1,18 @@
-import cpp from "../assets/cpp.png";
-import css from "../assets/css.png";
-import react from "../assets/react.png";
-import git from "../assets/git.png";
-import js from "../assets/javascript.png";
+import img1 from "../assets/blog/frontend.jpg";
+import img2 from "../assets/blog/coding.png";
 const blogData= [
-    {
-      name: "Blog test Name",
-      company:" text company",
-      image:cpp,
-     feedback:"this is very good blog"
-    },
-    {
-        name: "Blog test Name",
-        company:" text company",
-        image:css,
-       feedback:"this is very good blog"
-      },
-      {
-        name: "Blog test Name",
-        company:" text company",
-        image:react,
-       feedback:"this is very good blog"
-      },
-      {
-        name: "Blog test Name",
-        company:" text company",
-        image:git,
-       feedback:"this is very good blog"
-      },
-      {
-        name: "Blog test Name",
-        company:" text company",
-        image:js,
-       feedback:"this is very good blog"
-      },
-    
-  
+  {
+    title: "Front-end projects",
+    description: "Master Front-end development with these projects 🧑‍💻",
+    imgurl:img1,
+    link:"https://muazim.substack.com/p/front-end-projects-for-beginners"
+  },
+  {
+    title:"Accelerate Your Coding",
+    description:"Practical Steps to Accelerate Your Coding Journey 🚀",
+    imgurl:img2,
+    link:"https://muazim.substack.com/p/accelerate-your-coding-journey"
+  }
   ];
 
-  const otherBlogs=[
-    {
-      image:js,
-      name:"Blog1",
-    },
-    {
-      image:cpp,
-      name:"Blog1",
-    },
-    {
-      image:react,
-      name:"Blog1",
-    },
-    {
-      image:css,
-      name:"Blog1",
-    },
-    {
-      image:git,
-      name:"Blog1",
-    },
-  ]
-  export default blogData;
-  export {otherBlogs};
+export default blogData;
