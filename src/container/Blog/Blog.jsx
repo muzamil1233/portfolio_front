@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <>
       <h2 className="head-text">
-      Let's <span>Explore</span> and Write Something Remarkable
+      My blogs: Simplifying <span>Coding</span> Concepts
       </h2>
       <div className="app_profiles">
         {blogData.map((item, index) => (
