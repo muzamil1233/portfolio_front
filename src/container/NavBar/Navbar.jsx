@@ -27,12 +27,12 @@ const Navbar = () => {
         )}
       </ul>
       <a
-        href="https://wa.me/7889412167"
-        target="_blank"
+        href="#contact"
         rel="noopener noreferrer"
         className="app_navbar-button p-text"
+        
       >
-        <FaWhatsapp style={{ color: "#25D366" }} />
+        {/* <FaWhatsapp style={{ color: "#25D366" }} /> */}
         <p>Let's Talk</p>
       </a>
       {/*for hambergur menu used inside mobile devices */}
