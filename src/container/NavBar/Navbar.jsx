@@ -55,8 +55,8 @@ const Navbar = () => {
                 )
               )}
               <a
-                href="https://wa.me/7889412167"
-                target="_blank"
+                 href="#contact"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="talk_button p-text"
               >
