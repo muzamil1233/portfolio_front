@@ -1,7 +1,7 @@
 //website images
 
 import cw from "../assets/WorkImages/website/carWeb.png";
-import wc from "../assets/WorkImages/website/weCode.png";
+import wc from "../assets/WorkImages/website/wecode.png";
 import crypto from "../assets/WorkImages/website/crypto.png";
 import hadithApp from "../assets/WorkImages/website/hadithApp.png"
 
