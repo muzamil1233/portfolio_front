@@ -1,17 +1,9 @@
-//logos
-import ayazfruits from "../assets/WorkImages/Ayaz Fruit Co.png";
-import hotel from "../assets/WorkImages/hotel Dream.png";
-import tm from "../assets/WorkImages/Towfeeq medicate.png";
-import hR from "../assets/WorkImages/Hilal R.png";
-import trader from "../assets/WorkImages/trader Saboon.png";
-import uam from "../assets/WorkImages/UAM.png";
-
 //website images
-import bs from "../assets/WorkImages/website/brandSolutions.png";
+
 import cw from "../assets/WorkImages/website/carWeb.png";
-import wc from "../assets/WorkImages/website/wecode.png";
-import eh from "../assets/WorkImages/website/eventhub.png";
-import crypto from "../assets/WorkImages/website/cryptopedia.png";
+import wc from "../assets/WorkImages/website/weCode.png";
+import crypto from "../assets/WorkImages/website/crypto.png";
+import hadithApp from "../assets/WorkImages/website/hadithApp.png"
 
 //icons
 import { BsCodeSquare } from "react-icons/bs";
@@ -26,6 +18,16 @@ const projectsdata = [
     url: "https://cryptopedia.netlify.app/",
     code: "",
     image: crypto,
+    category: "Website",
+  },
+  {
+    tag: "All",
+    title: "Hadees App",
+    description:
+      "Get Hadith from books like bukhari shareef, muslim shareef and more.",
+    url: "https://cryptopedia.netlify.app/",
+    code: "",
+    image: hadithApp,
     category: "Website",
   },
   {
