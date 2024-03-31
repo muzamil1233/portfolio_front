@@ -25,7 +25,7 @@ const projectsdata = [
     title: "Hadees App",
     description:
       "Get Hadith from books like bukhari shareef, muslim shareef and more.",
-    url: "https://cryptopedia.netlify.app/",
+    url: "https://hadeesapp.vercel.app/",
     code: "",
     image: hadithApp,
     category: "Website",
