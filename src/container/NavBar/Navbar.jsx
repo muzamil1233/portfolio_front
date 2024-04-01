@@ -54,14 +54,14 @@ const Navbar = () => {
                   </li>
                 )
               )}
-              <a
+              {/* <a
                  href="#contact"
                 // target="_blank"
                 rel="noopener noreferrer"
                 className="talk_button p-text"
               >
                 Let's Talk
-              </a>
+              </a> */}
             </ul>
           </motion.div>
         )}
