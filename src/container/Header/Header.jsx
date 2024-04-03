@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./Header.scss";
-
+import {
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { animate, motion } from "framer-motion";
 import { images } from "../../constants/index";
 
@@ -28,7 +34,7 @@ const Header = () => {
   };
   const animationProjectsCount = () => {
     animate(0, 20, {
-      duration: 1.5, 
+      duration: 1.5,
       onUpdate: (value) =>
         (projectscount.current.textContent = value.toFixed()), //toFixed() will only give whole numbe like this 1,2,3,4... not like this 1.1213,2.221,.
     });
@@ -61,10 +67,10 @@ const Header = () => {
         <div className="app_header-badge">
           <div className="badge-cmp app__flex">
             <motion.span
-            ref={waveRef}
-            role="img"
-            aria-label="wave-hand"
-            className="wave-hand"
+              ref={waveRef}
+              role="img"
+              aria-label="wave-hand"
+              className="wave-hand"
               whileInView={{ rotate: [0, 20, -10, 10, 0] }}
               transition={{ duration: 2, loop: Infinity, repeatDelay: 3 }}
             >
@@ -133,6 +139,28 @@ const Header = () => {
             <span>Cups of coffee drunk</span>
           </div>
         </div>
+      </motion.div>
+
+      <motion.div
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="socialMediaLinks"
+      >
+        <a href="https://www.linkedin.com/in/muazim-maqbool/" target="_blank">
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/muazimmaqbool" target="_blank">
+          <FaGithub />
+        </a>
+        <a href="https://twitter.com/muazim_maqbool" target="_blank">
+          <FaTwitter />
+        </a>
+        <a href="https://www.instagram.com/muazim_codes/" target="_blank">
+          <FaInstagram />
+        </a>
+        <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">
+          <FaYoutube />
+        </a>
       </motion.div>
     </div>
   );
