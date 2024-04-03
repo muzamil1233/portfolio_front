@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaTwitter,FaGithub,FaLinkedin,FaInstagram,FaYoutube} from "react-icons/fa"
+import { SiSubstack } from "react-icons/si";
 
 const SocialMedia = () => {
   return (
@@ -19,6 +20,9 @@ const SocialMedia = () => {
         <a href='https://www.youtube.com/@Coding_Bytes_' target='_blank'>
             <FaYoutube/>
         </a>
+        {/* <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">
+          <SiSubstack />
+        </a> */}
     </div>
   )
 }

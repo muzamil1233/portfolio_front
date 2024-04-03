@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { SiSubstack } from "react-icons/si";
 import { animate, motion } from "framer-motion";
 import { images } from "../../constants/index";
 
@@ -161,6 +162,9 @@ const Header = () => {
         <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">
           <FaYoutube />
         </a>
+        {/* <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">
+          <SiSubstack />
+        </a> */}
       </motion.div>
     </div>
   );
