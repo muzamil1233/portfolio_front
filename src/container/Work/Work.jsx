@@ -72,7 +72,8 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-      <motion.div
+
+      {/* <motion.div
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="more_projects"
@@ -93,9 +94,9 @@ const Work = () => {
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      {moreprojects && (
+      {/* {moreprojects && (
         <motion.div
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -133,7 +134,7 @@ const Work = () => {
             <HiChevronRight />
           </div>
         </motion.div>
-      )}
+      )} */}
     </>
   );
 };
