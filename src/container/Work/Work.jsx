@@ -7,6 +7,7 @@ import { AppWrap, MotionWrap } from "../../Wrapper";
 import projectsdata, { moreprojects } from "../../constants/projectsdata";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
+
 const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,7 +64,8 @@ const Work = () => {
 
             <div className="app_work-content app__flex">
               <a href={work.url} target="_blank" rel="noreferrer">
-                <h4 className="bold-text">{work.title}</h4>
+                <h4 className="bold-text">{work.title}{""}<BsArrowUpRight /></h4>
+                
               </a>
               <p className="p-text description" style={{ marginTop: 10 }}>
                 {work.description}
