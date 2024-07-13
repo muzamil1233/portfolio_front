@@ -33,6 +33,7 @@ const Blog = () => {
           </a>
         ))}
       </div>
+      <a href="https://muazim.substack.com/" target="_blank"><button class="btn-24"><span>See More</span></button></a>
     </>
   );
 };

@@ -13,6 +13,7 @@ import {
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { TextField } from "@mui/material";
+import { IoIosSend } from "react-icons/io";
 
 const validationScheme = Yup.object().shape({
   name: Yup.string()
@@ -136,6 +137,7 @@ const Footer = () => {
             onClick={formik.handleSubmit}
           >
             {!loading ? "Send Message" : "Sending..."}
+            {/* <IoIosSend /> */}
           </button>
         </div>
       ) : (
