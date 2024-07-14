@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <>
       <h2 className="head-text">
-      My blogs: Simplifying <span>Coding</span> Concepts
+        My blogs: Simplifying <span>Coding</span> Concepts
       </h2>
       <div className="app_profiles">
         {blogData.map((item, index) => (
@@ -22,18 +22,16 @@ const Blog = () => {
             >
               <img src={item.imgurl} alt="about images" />
               <div className="blog_text">
-                <h2 className="bold-text">
-                  {item.title}
-                </h2>
-                <p className="p-text" >
-                  {item.description}
-                </p>
+                <h2 className="bold-text">{item.title}</h2>
+                <p className="p-text">{item.description}</p>
               </div>
             </motion.div>
           </a>
         ))}
       </div>
-      <a href="https://muazim.substack.com/" target="_blank"><button class="btn-24"><span>See More</span></button></a>
+      <a href="https://muazim.substack.com/" target="_blank">
+        <button className="seemore">See More Articles</button>
+      </a>
     </>
   );
 };
