@@ -131,14 +131,14 @@ const Footer = () => {
               <div className="warning-text">{formik.errors.message}</div>
             ) : null}
           </div>
-          <button
+          {/* <button
             type="button"
             className="p-text"
             onClick={formik.handleSubmit}
           >
             {!loading ? "Send Message" : "Sending..."}
-            {/* <IoIosSend /> */}
-          </button>
+          </button> */}
+          <button className="sendMessageBtn" type="button" onClick={formik.handleSubmit}>{!loading ? "Send Message" : "Sending..."}</button>
         </div>
       ) : (
         <div>

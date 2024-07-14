@@ -55,7 +55,7 @@
 
 
   .seemore {
-    --bg: #e74c3c;
+    margin: 2rem 0 0 0;
     --text-color: #fff;
     position: relative;
     width: 11rem;
@@ -63,10 +63,11 @@
     background: #313bac;
     color: var(--text-color);
     padding: 1em;
-    font-weight: bold;
+    font-weight:600;
+    font-family: var(--font-base);
     transition: 0.2s;
     border-radius: 5px;
-    opacity: 0.8;
+    opacity: 0.9;
     letter-spacing: 2px;
     box-shadow: #171c61 0px 7px 2px, #000 0px 8px 5px;
   }
@@ -77,5 +78,5 @@
   
   .seemore:active {
     top: 4px;
-    box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+    box-shadow: #171c61 0px 3px 2px,#000 0px 3px 5px;
   }

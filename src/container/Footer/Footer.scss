@@ -89,26 +89,26 @@
     }
   }
 
-  button {
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--secondary-color);
+  // button {
+  //   padding: 1rem 2rem;
+  //   border-radius: 10px;
+  //   border: none;
+  //   background-color: var(--secondary-color);
 
-    font-weight: 500;
-    color: var(--white-color);
-    outline: none;
-    margin: 2rem 0 0 0;
-    font-family: var(--font-base);
+  //   font-weight: 500;
+  //   color: var(--white-color);
+  //   outline: none;
+  //   margin: 2rem 0 0 0;
+  //   font-family: var(--font-base);
 
-    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    cursor: pointer;
+  //   transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  //   cursor: pointer;
 
-    &:hover {
-      background-color: #2430af;
-    }
+  //   &:hover {
+  //     background-color: #2430af;
+  //   }
     
-  }
+  // }
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -118,4 +118,31 @@
 .warning-text {
   color: red;
   font-size: 1rem;
+}
+
+.sendMessageBtn {
+  margin: 2rem 0 0 0;
+  --text-color: #fff;
+  position: relative;
+  width: 11rem;
+  border: none;
+  background: #313bac;
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: 600;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  box-shadow: #171c61 0px 7px 2px, #000 0px 8px 5px;
+  font-family: var(--font-base);
+}
+
+.sendMessageBtn:hover {
+  opacity: 1;
+}
+
+.sendMessageBtn:active {
+  top: 4px;
+  box-shadow: #171c61 0px 3px 2px,#000 0px 3px 5px;
 }
