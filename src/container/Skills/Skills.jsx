@@ -8,6 +8,8 @@ import skillsList from "../../constants/skillsList"
 import experiences from "../../constants/experiences";
 import { BsArrowUpRight } from 'react-icons/bs';
 
+
+
 const Skills = () => {
   // const [skills, setSkills] = useState([]);
   return (
