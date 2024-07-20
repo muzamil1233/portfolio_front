@@ -1,0 +1,136 @@
+.app_skills {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.app_skills-container {
+  width: 80%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .app_skills-container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.app_skills-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .app_skills-list {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.skill_circle {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.app_skills-item {
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.app_skills-item div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.app_skills-item div img {
+  width: 70%;
+  height: 70%;
+}
+@media screen and (min-width: 2000px) {
+  .app_skills-item div {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app_skills-item div {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app_skills-item {
+    margin: 0.7rem;
+  }
+}
+.app_skills-item p {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 2000px) {
+  .app_skills-item {
+    margin: 1rem 2rem;
+  }
+  .app_skills-item p {
+    margin-top: 1rem;
+  }
+}
+
+.app_skills-exp {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 80px;
+}
+@media screen and (max-width: 900px) {
+  .app_skills-exp {
+    display: none;
+  }
+}
+
+.app_skills-exp-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.app_skills-exp-works {
+  flex: 1;
+}
+.app_skills-exp-works a {
+  text-decoration: none;
+}
+.app_skills-exp-works a .app_skills-exp-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.app_skills-exp-works a .app_skills-exp-work h4 {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.app_skills-exp-works a .app_skills-exp-work p {
+  font-weight: 400;
+  color: var(--gray-color);
+  margin-top: 3px;
+}
+.app_skills-exp-works a:hover h4 {
+  color: var(--secondary-color);
+}/*# sourceMappingURL=skills.css.map */
