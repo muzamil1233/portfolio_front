@@ -64,7 +64,7 @@ const Footer = () => {
           target="_blank"
         >
           <FaGithub style={{ color: "#423e3e" }} />
-          <p>20k+ Commits</p>
+          <p>25k+ Commits</p>
         </a>
         <a
           className="app_footer-card p-text"
