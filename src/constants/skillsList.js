@@ -16,6 +16,7 @@ import java from "../assets/Skills/java.png"
 import python from "../assets/Skills/python.png"
 import gluestack from "../assets/Skills/gluestack.png"
 import tailwindCss from "../assets/Skills/tailwind-css-icon.png"
+import rnpLogo from "../assets/Skills/rnp.png"
 const skillsList= [
   {
     name: "Python",
@@ -102,11 +103,16 @@ const skillsList= [
     icon: gluestack,
     bgColor: "#edf3f8",
   },
-  // {
-  //   name: "TailwindCss",
-  //   icon: tailwindCss,
-  //   bgColor: "#edf3f8",
-  // },
+  {
+    name: "TailwindCss",
+    icon: tailwindCss,
+    bgColor: "#edf3f8",
+  },
+  {
+    name: "React Native Papers",
+    icon:rnpLogo,
+    bgColor: "#edf3f8",
+  },
 
 ];
 export default skillsList;
