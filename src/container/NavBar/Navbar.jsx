@@ -8,6 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 /*app__flex is defined inside App.scss */
 
+//called from App.js
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
