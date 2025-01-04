@@ -37,8 +37,8 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import js from  "../assets/js.png";
 
-import dp1 from "../assets/dp1.jpg"
-import dp2 from "../assets/dp2.jpg"
+import dp1 from "../assets/muzamil pic.jpg"
+import dp2 from "../assets/muzamil pic.jpg"
 
 export default {
   email,
