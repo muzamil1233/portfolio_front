@@ -3,13 +3,13 @@ const experiences = [
     works: [
       {
         name: "Html and Css",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/HTML-and-CSS--basic-to-advance"
+        description: "by muzamil",
+        link:"https://github.com/muzamil1233/Reactjs"
       },
       {
-        name: "Hands On SASS",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/Hands-on-SASS"
+        name: "Nodejs",
+        description: "by muzamil",
+        link:"https://github.com/muzamil1233/node.js"
       },
     ],
   },
@@ -17,42 +17,42 @@ const experiences = [
     works: [
       {
         name: "Javascript",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/Javascript-from-scratch"
+        description: "by muzamil",
+        link:"https://github.com/muzamil1233/javascript-me"
       },
-      {
-        name: "JSON Tutorials",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/Json-tutorials"
-      },
+      // {
+      //   name: "Nodejs",
+      //   description: "by muzamil",
+      //   link:"https://github.com/muzamil1233/node.js"
+      // },
     ],
   },
   {
     works: [
       {
         name: "Reactjs",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/Reactjs-with-Me"
+        description: "by muzamil",
+        link:"https://github.com/muzamil1233/react"
       },
-      {
-        name: "ReactNative",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/React-Native-Tutorials"
-      },
+      // {
+      //   name: "ReactNative",
+      //   description: "by muazim",
+      //   link:"https://github.com/muazimmaqbool/React-Native-Tutorials"
+      // },
     ],
   },
   {
     works: [
       {
-        name: "ReactNative Navigation",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/ReactNative_Navigation"
+        name: "JAVA",
+        description: "by muzamil",
+        link:"https://github.com/muzamil1233/java-me"
       },
-      {
-        name: "Nodejs",
-        description: "by muazim",
-        link:"https://github.com/muazimmaqbool/NodeJs"
-      },
+      // {
+      //   name: "Nodejs",
+      //   description: "by muzamil",
+      //   link:"https://github.com/muzamil1233/node.js"
+      // },
     ],
   },
 ];
