@@ -5,19 +5,19 @@ import { SiSubstack } from "react-icons/si";
 const SocialMedia = () => {
   return (
     <div className='app__social'>
-        <a href='https://www.linkedin.com/in/muazim-maqbool/' target='_blank'>
+        <a href='https://www.linkedin.com/in/muzamil-nabi-1a2435224/' target='_blank'>
             <FaLinkedin/>
         </a>
-        <a href='https://github.com/muazimmaqbool' target='_blank'>
+        <a href='https://github.com/muzamil1233' target='_blank'>
             <FaGithub/>
         </a>
-        <a href='https://twitter.com/muazim_maqbool' target='_blank'>
+        <a href='https://x.com/muzamil318647' target='_blank'>
           <FaTwitter/>  
         </a>
-        <a href='https://www.instagram.com/muazim_codes/' target='_blank'>
+        <a href='https://www.instagram.com/muzamil_nabii/' target='_blank'>
             <FaInstagram/>
         </a>
-        <a href='https://yt.openinapp.co/o3bk1' target='_blank'>
+        <a href='https://www.youtube.com/@Muzamil_DevHub' target='_blank'>
             <FaYoutube/>
         </a>
         {/* <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">

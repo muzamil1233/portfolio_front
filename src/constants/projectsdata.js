@@ -1,9 +1,9 @@
 //website images
 
-import cw from "../assets/WorkImages/website/carWeb.png";
+import gym from "../assets/WorkImages/website/gym.jpg";
 import wc from "../assets/WorkImages/website/wecode.png";
 import crypto from "../assets/WorkImages/website/crypto.png";
-import hadithApp from "../assets/WorkImages/website/hadithApp.png"
+import videohub from "../assets/WorkImages/website/videohub.jpeg"
 
 //icons
 import { BsCodeSquare } from "react-icons/bs";
@@ -15,29 +15,29 @@ const projectsdata = [
     title: "CryptoPedia",
     description:
       "With CryptoPedia, you can easily access the latest market data.",
-    url: "https://cryptopedia.netlify.app/",
+    url: "https://cryptoapp-alpha-pink.vercel.app/",
     code: "",
     image: crypto,
     category: "Website",
   },
   {
     tag: "All",
-    title: "Hadees App",
+    title: "ClipNest",
     description:
-      "Get Hadith from books like bukhari shareef, muslim shareef and more.",
-    url: "https://hadeesapp.vercel.app/",
+      "ClipNest is a feature-rich video streaming app designed for easy access to your favorite movies, shows, and content creators",
+    url: "https://videohub-eta.vercel.app/",
     code: "",
-    image: hadithApp,
+    image: videohub,
     category: "Website",
   },
   {
     tag: "All",
-    title: "CarWeb",
+    title: "GymSync",
     description:
-      "Website design for car modification company.",
-    url: "https://carwebshop.netlify.app/#",
+      "sync your gym workouts and fitness progress in one app. GymSync offers smart workout tracking, goal-setting, and personalized fitness coaching.",
+    url: "https://fit-club-lac.vercel.app/",
     code: "",
-    image: cw,
+    image: gym,
     category: "Website",
   },
   {
@@ -45,7 +45,7 @@ const projectsdata = [
     title: "WeCode Institute",
     description:
       "Front End website design for coding institutes.",
-    url: "https://wecodeinstitute.netlify.app/",
+    url: "https://master--ipec-muz.netlify.app/",
     code: "",
     image: wc,
     category: "Website",

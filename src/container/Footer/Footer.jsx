@@ -38,10 +38,10 @@ const Footer = () => {
       setLoading(true);
       emailjs
         .send(
-          "service_jcvup4k",
-          "template_9x4idnr",
+          "service_n1t22bc",
+          "template_d40o6b8",
           values,
-          "nULCbUGE21ml8lSPw"
+          "03Zq7bVxn5BVPi1-L"
         )
         .then((result) => {
           console.log(result.text);
@@ -60,7 +60,7 @@ const Footer = () => {
       <div className="app_footer-cards">
         <a
           className="app_footer-card p-text"
-          href="https://github.com/muazimmaqbool"
+          href="https://github.com/muzamil1233"
           target="_blank"
         >
           <FaGithub style={{ color: "#423e3e" }} />
@@ -68,7 +68,7 @@ const Footer = () => {
         </a>
         <a
           className="app_footer-card p-text"
-          href="https://www.linkedin.com/in/muazim-maqbool"
+          href="https://www.linkedin.com/in/muzamil-nabi-1a2435224/"
           target="_blank"
         >
           <FaLinkedin style={{ color: "#0e76a8" }} />
@@ -76,7 +76,7 @@ const Footer = () => {
         </a>
         <a
           className="app_footer-card p-text"
-          href="https://www.instagram.com/muazim_codes/"
+          href="https://www.instagram.com/muzamil_nabii/"
           target="_blank"
         >
           <FaInstagram style={{ color: "#dd2a7b" }} />
@@ -84,7 +84,7 @@ const Footer = () => {
         </a>
         <a
           className="app_footer-card p-text"
-          href="https://www.quora.com/profile/Muazim-Maqbool"
+          href="https://www.quora.com/profile/Muzamil-Nabi-38"
           target="_blank"
         >
           <FaQuora style={{ color: "#A82400" }} />
