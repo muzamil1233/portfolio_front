@@ -57,7 +57,7 @@ const Footer = () => {
   return (
     <>
       <h2 className="head-text"> Let's <span>connect</span> and <span>code</span> something <span>extraordinary</span></h2>
-      <div className="app_footer-cards">
+      {/* <div className="app_footer-cards">
         <a
           className="app_footer-card p-text"
           href="https://github.com/muzamil1233"
@@ -90,7 +90,7 @@ const Footer = () => {
           <FaQuora style={{ color: "#A82400" }} />
           <p>50k+ Views</p>
         </a>
-      </div>
+      </div> */}
       {!isFormSubmitted ? (
         <div className="app_footer-form app__flex">
           <div className="app__flex">
