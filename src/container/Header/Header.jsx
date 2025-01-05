@@ -159,7 +159,7 @@ const Header = () => {
         <a href="https://www.instagram.com/muzamil_nabii/" target="_blank">
           <FaInstagram />
         </a>
-        <a href="https://yt.openinapp.co/o3bk1" target="_blank">
+        <a href="https://www.youtube.com/@Muzamil_DevHub" target="_blank">
           <FaYoutube />
         </a>
         {/* <a href="https://www.youtube.com/@Coding_Bytes_" target="_blank">
